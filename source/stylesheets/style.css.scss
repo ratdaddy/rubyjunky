@@ -1,0 +1,154 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+$ruby: #bf0419;
+$gray-background: #f8f8f8;
+$gray-border: #ddd;
+
+body {
+  font-family: "proxima-nova", $helvetica;
+  font-weight: 400;
+  background-image: url('/images/gray_bkd.png');
+}
+
+#upper-red {
+  background-image: url('/images/diag_red_squares.png');
+  border-bottom: 1px solid white;
+}
+
+#header {
+  @include outer-container;
+  @include linear-gradient(#3b3b3b, #000);
+  @include border-bottom-radius(5px);
+  padding: 0 20px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.18);
+
+  #nav-left {
+    float: left;
+  }
+
+  #nav-right {
+    float: right;
+  }
+
+  a:link, a:visited, p {
+    font-size: 13px;
+    color: white;
+  }
+
+  a:link, a:visited {
+    text-decoration: none;
+  }
+
+  ul, li, p {
+    display: inline-block;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    text-decoration: none;
+  }
+
+  li a {
+    padding: 0 10px;
+    border-right: 1px solid #aaa;
+  }
+
+  li:last-child a {
+    border-right: none;
+  }
+}
+
+#title {
+  padding-bottom: 30px;
+
+  #title-text {
+    @include outer-container;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+
+    h1 a {
+      font-family: "proxima-nova";
+      color: white;
+      font-weight: 900;
+      font-size: 60px;
+      margin: 0;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+#main {
+  @include outer-container;
+  position: relative;
+  top: -40px;
+  padding: 0 50px 40px 50px;
+  @include border-top-radius(7px);
+  @include border-bottom-radius(7px);
+  background-image: url('/images/diag_white_squares.png');
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1, h1 a {
+  font-family: "proxima-nova", $helvetica;
+  font-weight: 700;
+  color: $ruby;
+  text-decoration: none;
+}
+
+h2 {
+  font-family: "proxima-nova", $helvetica;
+  font-weight: 700;
+  color: $ruby;
+}
+
+a.read_more {
+  text-decoration: none;
+  color: $ruby;
+}
+
+pre {
+  font-family: 'source-code-pro', $monospace;
+  font-size: 14px;
+  padding: 9px 18px;
+  border: 1px solid $gray-border;
+  @include border-top-radius(5px);
+  @include border-bottom-radius(5px);
+  overflow: auto;
+}
+
+.highlight {
+  background-color: white;
+}
+
+code {
+  font-family: 'source-code-pro', $monospace;
+  background-color: white;
+  border: 1px solid $gray-border;
+  font-size: 80%;
+  padding: 0 5px;
+  @include border-top-radius(3px);
+  @include border-bottom-radius(3px);
+}
+
+#disqus_thread {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid $ruby;
+}
+
+#footer {
+  margin: 20px;
+  text-align: center;
+  font-size: 70%;
+}
