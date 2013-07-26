@@ -33,7 +33,7 @@ end
 
 page "/feed.xml", layout:  false
 
-### ctivate sync extension
+### Activate sync extension
 activate :sync do |sync|
   sync.fog_provider = 'AWS' # Your storage provider
   sync.fog_directory = 'rubyjunky.com' # Your bucket name
@@ -121,3 +121,7 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+
+require 'quiet_highlighting'
+
+activate QuietHighlighting::Extension
