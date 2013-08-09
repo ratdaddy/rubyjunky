@@ -2,7 +2,6 @@
 title: Cleaning Up Rails 4 Production Logging
 date: 2013-07-30
 tags: Rails, Logging
-published: false
 ---
 
 I've seen some very effective use of application logging to debug difficult problems. The foundation of good logging
