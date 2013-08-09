@@ -125,6 +125,7 @@ pre {
   @include border-top-radius(5px);
   @include border-bottom-radius(5px);
   overflow: auto;
+  white-space: pre;
 }
 
 .highlight {
