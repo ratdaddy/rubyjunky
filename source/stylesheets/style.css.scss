@@ -99,6 +99,14 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
+#articles {
+  @include span-columns(9);
+}
+
+#sidebar {
+  @include span-columns(3);
+}
+
 h1, h1 a {
   font-family: "proxima-nova", $helvetica;
   font-weight: 700;

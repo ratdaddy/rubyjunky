@@ -56,30 +56,39 @@
     </div>
     
     <div id="main" role="main">
-      <% if is_blog_article? %>
-        <h1><%= current_article.title %></h1>
-      <% end %>
+      <div id="articles">
+        <% if is_blog_article? %>
+          <h1><%= current_article.title %></h1>
+        <% end %>
 
-      <%= yield %>
+        <%= yield %>
 
-      <% if is_blog_article? %>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-          var disqus_shortname = 'rubyjunky'; // required: replace example with your forum shortname
-          var disqus_identifier = '<%= current_article.title %>';
-          var disqus_title = disqus_identifier;
+        <% if is_blog_article? %>
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'rubyjunky'; // required: replace example with your forum shortname
+            var disqus_identifier = '<%= current_article.title %>';
+            var disqus_title = disqus_identifier;
 
-          /* * * DON'T EDIT BELOW THIS LINE * * */
-          (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-      <% end %>
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <% end %>
+      </div>
+
+      <div id="sidebar">
+        <h2>Recent Posts</h2>
+        <% blog.articles[0...5].each do |article| %>
+          <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
+        <% end %>
+      </div>
     </div>
   </body>
 </html>
