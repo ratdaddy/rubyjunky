@@ -6,7 +6,7 @@ tags: Rails, ActiveRecord, serialize, Serialization
 
 First off I have to admit I am not the best Googler in the world. So when I set out to figure out how to store a bunch of key/value pairs into a single text column in a database it is somewhat understandable that I turned up confusing results around Rails serialize. Unfortunately it looks like they've somewhat overloaded the "serialize" concept in Rails. The root of the term refers to both:
 
-1. [The notion of marshaling your data into a string of text and storing it in a column in the database.](http://api.rubyonrails.org/classes/ActiveRecord/Base.html#label-Saving%2Barrays%252C%2Bhashes%252C%2Band%2Bother%2Bnon-mappable%2Bobjects%2Bin%2Btext%2Bcolumns)
+1. [The notion of marshaling your data into a string of text and storing it in a column in the database.](http://api.rubyonrails.org/classes/ActiveRecord/Base.html#class-ActiveRecord::Base-label-Saving+arrays-2C+hashes-2C+and+other+non-mappable+objects+in+text+columns)
 2. [Creating data for a rails API (often to be used with a JavaScript framework) from a model.](http://api.rubyonrails.org/classes/ActiveModel/Serialization.html)
 
 My use case is storing a bunch of key/value data that I don't necessarily control the source of. I may want to add data for new keys or have older keys' data be deprecated. Also, I likely won't need to query on any of the data so one of the best solutions would be to encode the data into some kind of text format and store it as a `text` column on an appropriately associated model. I'm using MySQL and thus don't have the capabilities of a nosql or schema-less database at my disposal.
