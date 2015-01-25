@@ -21,13 +21,20 @@ to just build things from scratch in the first place.
 In this post I'll look at
 some of the basics of these two popular gems
 and some of the drawbacks I've encountered using them.
-In the future I'll explore
+In subsequent articles I'll explore
 what it takes to build your own admin interface
 providing admin users on your site
 the controls necessary to make changes to the system
 to keep their users happy.
 
 READMORE
+
+After reading the rationale
+for why it's good to write your own admin interface,
+come back here to read the other articles in the series
+where we look at what it takes to create our interface:
+
+- [Building Admin From the Rails Scaffold](2015-01-19-building-admin-from-the-rails-scaffold.html)
 
 # [ActiveAdmin](http://activeadmin.info/) and [RailsAdmin](https://github.com/sferik/rails_admin)
 
