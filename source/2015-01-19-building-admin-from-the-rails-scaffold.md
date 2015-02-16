@@ -25,7 +25,7 @@ At the time of this writing Rails 4.2 is freshly out
 so we'll also take advantage of some of the new features that version has to offer
 (in the case of this article, foreign key constraints on models).
 
-# Creating the Application
+## Creating the Application
 
 I like to start my new Rails applications
 with a fresh version of Rails.
@@ -63,7 +63,7 @@ $ rails generate scaffold comment body:text commenter:string email:string websit
 $ rake db:create db:migrate
 ```
 
-# The Admin Dashboard
+## The Admin Dashboard
 
 We'll need a page
 with links
@@ -97,7 +97,7 @@ in `app/views/admin/home.html.erb` like:
 </ul>
 ```
 
-# Authentication
+## Authentication
 
 Out of the box
 Rails applications don't have any sort
@@ -181,7 +181,7 @@ we'll need to run:
 $ rake db:seed
 ```
 
-# Requiring Admin Authentication
+## Requiring Admin Authentication
 
 Now that we have a way to create admin users
 and the initial user created on our system
@@ -207,7 +207,7 @@ Successfully logging in will then allow
 us to perform all the operations allowed
 by our scaffold controllers.
 
-# Coming up
+## Coming up
 
 In a few short steps we've
 been able to create our application,

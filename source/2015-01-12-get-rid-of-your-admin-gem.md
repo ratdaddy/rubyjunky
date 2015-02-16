@@ -36,7 +36,7 @@ where we look at what it takes to create our interface:
 
 - [Building Admin From the Rails Scaffold](2015-01-19-building-admin-from-the-rails-scaffold.html)
 
-# [ActiveAdmin](http://activeadmin.info/) and [RailsAdmin](https://github.com/sferik/rails_admin)
+## [ActiveAdmin](http://activeadmin.info/) and [RailsAdmin](https://github.com/sferik/rails_admin)
 
 These two widely-used gems
 come with essentially the same set of features out of the box:
@@ -62,13 +62,13 @@ come with essentially the same set of features out of the box:
   and control what data they are allowed
   to see and modify.
 
-# Problems
+## Problems
 
 Let's take a look at some
 of the problems I've found
 while using these tools.
 
-## Not The Rails Way
+### Not The Rails Way
 
 ActiveAdmin introduces
 its own view/controller structure
@@ -94,7 +94,7 @@ whatever templating system you've chosen for your application,
 like ERB or HAML,
 but that's not what the admin gems use out of the box.
 
-## Soon You're All In
+### Soon You're All In
 
 By default, once you've set up
 a model to use one of these gems
@@ -115,7 +115,7 @@ for all my models
 and this is no more convenient
 than if I were building my own admin interface.
 
-## The Admin Definition Code Ends up in Weird Places
+### The Admin Definition Code Ends up in Weird Places
 
 ActiveAdmin puts its configuration/code
 in an `apps/admin` subdirectory.
@@ -126,7 +126,7 @@ In either case this
 doesn't follow Rails' conventions
 for locating controller and view code.
 
-## You May End up With Inefficient Queries
+### You May End up With Inefficient Queries
 
 While you can configure custom derived fields
 for the various view types
@@ -144,7 +144,7 @@ queries for each aggregate value
 then go back and possibly
 do both queries yet again to calculate the ratio.
 
-## Limited View Types Per Model Class
+### Limited View Types Per Model Class
 
 ActiveAdmin only allows controls
 for a given model
@@ -159,7 +159,7 @@ create additional actions on a model's controller
 or use one action that looks at additional URL parameters
 to produce different index views.
 
-## Can be Too Powerful
+### Can be Too Powerful
 
 Because the admin gems abstract away operations like record deletion
 you might need to be careful that associated records
@@ -178,14 +178,14 @@ match what you intend for the application
 especially when you're not directly invoking
 operations like model object delete and create.
 
-## It Bloats Your Application
+### It Bloats Your Application
 
 These admin gems drag in a bunch of other dependencies
 when you add them to your `Gemfile`. 
 I've [written elsewhere](http://www.toptal.com/ruby-on-rails/top-10-mistakes-that-rails-programmers-make#common-mistake-5-using-too-many-gems) on
 why lots of gems in your application can be a problem.
 
-# Summing up
+## Summing up
 
 There are a lot of tradeoffs
 to consider when using an admin gem in your application.
