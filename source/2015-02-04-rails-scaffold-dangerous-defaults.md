@@ -130,7 +130,7 @@ of exposing our `secret_info`.
 However, on a production environment
 it returns a 500 error:
 
-```json
+```bash
 $ curl localhost:3000/user_infos.json
 {"status":"500","error":"Internal Server Error"}
 ```
