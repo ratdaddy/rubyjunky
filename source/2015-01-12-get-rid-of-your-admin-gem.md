@@ -35,6 +35,7 @@ come back here to read the other articles in the series
 where we look at what it takes to create our interface:
 
 - [Building Admin From the Rails Scaffold](2015-01-19-building-admin-from-the-rails-scaffold.html)
+- [Creating Rails Admin Pages from Scratch (Part 1: Index)](2015-03-01-creating-rails-admin-pages-from-scratch-part-1-index.html)
 
 ## [ActiveAdmin](http://activeadmin.info/) and [RailsAdmin](https://github.com/sferik/rails_admin)
 
