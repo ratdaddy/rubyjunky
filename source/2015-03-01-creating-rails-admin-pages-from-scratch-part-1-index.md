@@ -2,7 +2,6 @@
 title: "Creating Rails Admin Pages from Scratch (Part 1: Index)"
 date: 2015-03-01
 tags: Rails, admin
-published: false
 ---
 
 [Previously](/get-rid-of-your-admin-gem.html) I wrote about
