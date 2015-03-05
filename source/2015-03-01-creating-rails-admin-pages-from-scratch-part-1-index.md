@@ -275,15 +275,11 @@ class Admin::BaseController < ApplicationController
 
 private
   def grid_class
-    @@grid_class ||= eval(grid_class_name)
+    @@grid_class ||= self.class::Grid
   end
 
   def grid_params
-    params[grid_class_name.underscore]
-  end
-
-  def grid_class_name
-    @@grid_class_name ||= "#{self.class.name}::Grid"
+    params[grid_class.name.underscore.gsub('/', '_')]
   end
 end
 ```
