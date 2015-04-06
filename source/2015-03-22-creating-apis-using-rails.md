@@ -34,7 +34,6 @@ why you would create a Rails API:
   [Ember.js](https://github.com/emberjs/ember-rails#csrf-token),
   [AngularJS](https://docs.angularjs.org/api/ng/service/$http#cross-site-request-forgery-xsrf-protection),
   or [Flux](http://facebook.github.io/flux/)/[React](http://facebook.github.io/react/).
-  
 - As the backend to a mobile application.
 - As an interface for other web-based services to access and modify the data in your application.
 - As a component in a larger Service Oriented Architecture (SOA) application.
@@ -61,7 +60,7 @@ and may not require any authentication at all.
 
 Future articles will cover the following topics in more detail:
 
-- Authentication and authorization
+- [Authentication and authorization](authorization-and-authentication-in-a-Rails-api.html)
 - Resource schema and how it relates to your URIs
 - How to represent the resources in JSON
 - Request validation

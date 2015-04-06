@@ -150,6 +150,10 @@ code {
   @include border-bottom-radius(3px);
 }
 
+dt {
+  font-weight: bold;
+}
+
 #disqus_thread {
   margin-top: 20px;
   padding-top: 20px;
